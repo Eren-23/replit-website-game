@@ -138,6 +138,7 @@ header{
 
 .center_text {
     text-align: center;
+    margin-top: 30px;
 }
 
 .bold_text {
@@ -182,4 +183,62 @@ a {
 
 .opaque {
     opacity: 1;
+}
+
+#top-link {
+    text-decoration: none;
+    color: darkgreen;
+    background-color: white;
+    border: 5px solid darkgreen;
+    border-radius: 5px;
+}
+
+
+/* Eren Scroll Feature */
+
+#scroll-container {
+border: 3px solid white;
+border-radius: 5px;
+overflow: hidden;
+}
+
+#scroll-text {
+    display: inline-flex;
+    white-space: nowrap;
+/* animation properties */
+-moz-transform: translateX(50%);
+-webkit-transform: translateX(50%);
+transform: translateX(50%);
+
+-moz-animation: my-animation 60s linear infinite;
+-webkit-animation: my-animation 60s linear infinite;
+animation: my-animation 60s linear infinite;
+}
+
+#scroll-text p {
+    padding-right: 100px;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+from { -moz-transform: translateX(50%); }
+to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+from { -webkit-transform: translateX(50%); }
+to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+from {
+  -moz-transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+to {
+  -moz-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%); }
 }
